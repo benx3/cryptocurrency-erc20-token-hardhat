@@ -9,15 +9,15 @@ const hre = require("hardhat");
 
 async function main() {
   // ========== CẤU HÌNH ==========
-  const contractAddress = "0x1234567890AbCdEf1234567890AbCdEf12345678"; // Thay bằng địa chỉ contract
-  const recipientAddress = "0xRecipientAddress123"; // Địa chỉ nhận token mới
-  const amountToMint = "500000"; // Số lượng token mint
+  const contractAddress = "0x5A3023c7158294087D3a39063954e916D44ED04B"; // Thay bằng địa chỉ contract
+  const recipientAddress = "0xCDF2595bD72aDaf8Ff411ebfBF39192e10E1f8f1"; // Địa chỉ nhận token mới
+  const amountToMint = "1000000000"; // Số lượng token mint
 
   // ========== KẾT NỐI CONTRACT ==========
   console.log("⏳ Đang kết nối contract...\n");
   
   try {
-    const MyToken = await hre.ethers.getContractAt("MyToken", contractAddress);
+    const MyToken = await hre.ethers.getContractAt("SBD", contractAddress);
     
     const symbol = await MyToken.symbol();
     const totalSupply = await MyToken.totalSupply();
