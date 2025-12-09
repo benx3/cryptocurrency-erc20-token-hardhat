@@ -11,10 +11,10 @@ const hre = require("hardhat");
 
 async function main() {
   // ========== CẤU HÌNH ==========
-  const contractAddress = "0x1234567890AbCdEf1234567890AbCdEf12345678"; // Thay bằng địa chỉ contract
-  const ownerAddress = "0xOwnerAddress123"; // Địa chỉ người sở hữu token
-  const recipientAddress = "0xRecipientAddress123"; // Địa chỉ người nhận
-  const amountToTransfer = "100"; // Số lượng token
+  const contractAddress = "0x5A3023c7158294087D3a39063954e916D44ED04B"; // Thay bằng địa chỉ contract
+  const ownerAddress = "0xcdf2595bd72adaf8ff411ebfbf39192e10e1f8f1"; // Địa chỉ người sở hữu token
+  const recipientAddress = "0x3281caddd4d639022a35980568544599c36b9b9a"; // Địa chỉ người nhận
+  const amountToTransfer = "100000"; // Số lượng token
 
   // ========== KẾT NỐI CONTRACT ==========
   console.log("⏳ Đang kết nối contract...\n");

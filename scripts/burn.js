@@ -11,8 +11,8 @@ const hre = require("hardhat");
 
 async function main() {
   // ========== CẤU HÌNH ==========
-  const contractAddress = "0x1234567890AbCdEf1234567890AbCdEf12345678"; // Thay bằng địa chỉ contract
-  const amountToBurn = "100"; // Số lượng token burn
+  const contractAddress = "0x5A3023c7158294087D3a39063954e916D44ED04B"; // Thay bằng địa chỉ contract
+  const amountToBurn = "10000"; // Số lượng token burn
 
   // ========== KẾT NỐI CONTRACT ==========
   console.log("⏳ Đang kết nối contract...\n");

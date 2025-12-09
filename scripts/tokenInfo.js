@@ -9,8 +9,8 @@ const hre = require("hardhat");
 
 async function main() {
   // ========== CẤU HÌNH ==========
-  const contractAddress = "0x1234567890AbCdEf1234567890AbCdEf12345678"; // Thay bằng địa chỉ contract
-  const checkerAddress = "0xYourAddressHere"; // Thay bằng địa chỉ cần kiểm tra
+  const contractAddress = "0x5A3023c7158294087D3a39063954e916D44ED04B"; // Thay bằng địa chỉ contract
+  const checkerAddress = "0xcdf2595bd72adaf8ff411ebfbf39192e10e1f8f1"; // Thay bằng địa chỉ cần kiểm tra
 
   console.log("\n🐕 SCOOBY-DOO TOKEN INFO 🐕\n");
   

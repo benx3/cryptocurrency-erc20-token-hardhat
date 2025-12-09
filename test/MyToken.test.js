@@ -1,13 +1,13 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
-describe("MyToken ERC-20", function () {
+describe("SBD ERC-20", function () {
   let myToken;
   let owner;
   let addr1;
   let addr2;
-  const TOKEN_NAME = "MyToken";
-  const TOKEN_SYMBOL = "MTK";
+  const TOKEN_NAME = "Scooby-Doo";
+  const TOKEN_SYMBOL = "SBD";
   const INITIAL_SUPPLY = ethers.parseEther("1000000"); // 1,000,000 tokens
   const MAX_SUPPLY = ethers.parseEther("10000000"); // 10,000,000 tokens
 
@@ -16,7 +16,7 @@ describe("MyToken ERC-20", function () {
     [owner, addr1, addr2] = await ethers.getSigners();
 
     // Deploy contract
-    const MyToken = await ethers.getContractFactory("MyToken");
+    const MyToken = await ethers.getContractFactory("Scooby-Doo");
     myToken = await MyToken.deploy(TOKEN_NAME, TOKEN_SYMBOL, INITIAL_SUPPLY, MAX_SUPPLY);
     await myToken.waitForDeployment();
   });

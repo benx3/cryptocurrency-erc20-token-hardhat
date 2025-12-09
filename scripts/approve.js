@@ -9,8 +9,8 @@ const hre = require("hardhat");
 
 async function main() {
   // ========== CẤU HÌNH ==========
-  const contractAddress = "0x1234567890AbCdEf1234567890AbCdEf12345678"; // Thay bằng địa chỉ contract
-  const spenderAddress = "0xSpenderAddress123"; // Thay bằng địa chỉ được phê duyệt
+  const contractAddress = "0x5A3023c7158294087D3a39063954e916D44ED04B"; // Thay bằng địa chỉ contract
+  const spenderAddress = "0xcdf2595bd72adaf8ff411ebfbf39192e10e1f8f1"; // Thay bằng địa chỉ được phê duyệt
   const amountToApprove = "1000"; // Số lượng token được phê duyệt
 
   // ========== KẾT NỐI CONTRACT ==========

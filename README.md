@@ -1,11 +1,8 @@
 # 🐕 Scooby-Doo Token (SBD) - ERC-20 Cryptocurrency Project
 
-**Dự án Scooby-Doo (SBD) Token** là một ứng dụng blockchain hoàn chỉnh được xây dựng trên nền tảng Hardhat, triển khai một token tiền điện tử tuân theo tiêu chuẩn ERC-20 với tổng cung cấp 1 tỷ token SBD. Dự án cung cấp một smart contract thông minh với các chức năng cốt lõi bao gồm hệ thống ánh xạ (mappings) để quản lý số dư ví (`balances`) và quyền chi tiêu được phê duyệt (`allowances`) của các địa chỉ. Người dùng có thể thực hiện các giao dịch token thông qua các hàm chuyển tiền (`transfer`), phê duyệt quyền sử dụng (`approve`), và chuyển tiền thay mặt (`transferFrom`) theo đúng chuẩn ERC-20. Dự án bao gồm 8 script tương tác sẵn sàng cho phép người dùng dễ dàng thực hiện các thao tác như kiểm tra số dư, chuyển token, tạo token mới (chỉ chủ sở hữu), và tiêu hủy token. Ngoài ra, dự án cung cấp hệ thống kiểm thử toàn diện với 34 bài test để đảm bảo tính chính xác của tất cả các chức năng token. Tất cả mã nguồn được viết bằng Solidity 0.8.20 và được tối ưu hóa bằng OpenZeppelin v5, đảm bảo an toàn và tuân thủ tiêu chuẩn ngành công nghiệp. Dự án đã được cấu hình sẵn để triển khai trên mạng testnet Sepolia, kèm theo tài liệu chi tiết bằng tiếng Việt và tiếng Anh để hướng dẫn người dùng qua từng bước từ cài đặt đến triển khai và tương tác với token.
+**Dự án Scooby-Doo (SBD) Token** là một ứng dụng blockchain hoàn chỉnh được xây dựng trên nền tảng Hardhat, triển khai một token tiền điện tử tuân theo tiêu chuẩn ERC-20 với tổng cung cấp 1 tỷ token SBD. Dự án cung cấp một smart contract thông minh với các chức năng cốt lõi bao gồm hệ thống ánh xạ (mappings) để quản lý số dư ví (`balances`) và quyền chi tiêu được phê duyệt (`allowances`) của các địa chỉ. Người dùng có thể thực hiện các giao dịch token thông qua các hàm chuyển tiền (`transfer`), phê duyệt quyền sử dụng (`approve`), và chuyển tiền thay mặt (`transferFrom`) theo đúng chuẩn ERC-20. Dự án bao gồm 8 script tương tác sẵn sàng cho phép người dùng dễ dàng thực hiện các thao tác như kiểm tra số dư, chuyển token, tạo token mới (chỉ chủ sở hữu), và tiêu hủy token. Tất cả mã nguồn được viết bằng Solidity 0.8.20 và được tối ưu hóa bằng OpenZeppelin v5, đảm bảo an toàn và tuân thủ tiêu chuẩn ngành công nghiệp. Dự án đã được cấu hình sẵn để triển khai trên mạng testnet Sepolia.
 
 ---
-
-## 🎉 Project Status - SUCCESSFULLY DEPLOYED ✅
-
 ## 🎉 Project Status - SUCCESSFULLY DEPLOYED ✅
 
 ### Deployment Information
@@ -146,9 +143,9 @@ cp .env.example .env
 
 ### Step 2: Configure .env
 ```dotenv
-INFURA_API_KEY=df2af98e1ebf4f779e62e017e84c4685
-PRIVATE_KEY=0xc25d8f1ae10c69bcc992d69338c0bb170e80ada77d152e2ace48fb0ca45b7ff5
-ETHERSCAN_API_KEY=SY4EX99QB9AW5PZPN44V1V5RUAUD25C3RC
+INFURA_API_KEY=xxx
+PRIVATE_KEY=xxx
+ETHERSCAN_API_KEY=xxx
 ```
 
 ### Step 3: Compile
@@ -262,7 +259,7 @@ Deployment Status:    ✅ LIVE
 
 ---
 
-## 📞 Troubleshooting
+## Troubleshooting
 
 ### Issue: "Account has no balance"
 **Solution:** Get Sepolia ETH from faucet: https://sepoliafaucet.com/
@@ -279,57 +276,6 @@ Deployment Status:    ✅ LIVE
 ### Issue: "Invalid project id"
 **Solution:** Check Infura Project ID is correct (no URLs, just the ID)
 
----
-
-## 🎓 What You Can Do
-
-### Immediately
-✅ View token on Etherscan  
-✅ Add to MetaMask  
-✅ Check balance  
-✅ Send tokens to friends  
-
-### With Script Modification
-✅ Mint new tokens (up to 1B limit)  
-✅ Burn tokens  
-✅ Set spending allowances  
-✅ Transfer on behalf  
-
-### Advanced
-✅ Verify contract on Etherscan  
-✅ List on DEX (Uniswap, etc.)  
-✅ Build custom DApps  
-✅ Integrate with other contracts  
-
----
-
-## 🎯 Next Steps
-
-1. **Add to MetaMask** - Use contract address above
-2. **Share Token** - Distribute SBD to testers
-3. **Verify on Etherscan** - Make code publicly visible
-4. **Monitor** - Track transactions on block explorer
-5. **Plan** - Consider tokenomics and future upgrades
-
----
-
-## ⚠️ Important Security Notes
-
-🔒 **DO:**
-- Keep private key secret and secure
-- Use testnet account, never production wallet
-- Backup deployment contract address
-- Verify contract on Etherscan
-- Test thoroughly before mainnet
-
-❌ **DON'T:**
-- Share or commit `.env` file
-- Use production wallet for testnet
-- Send real ETH to test contracts
-- Ignore security best practices
-- Deploy without testing
-
----
 
 ## 📝 License
 
@@ -361,28 +307,6 @@ You now have a fully functional ERC-20 token with:
 - ✅ Comprehensive testing (34 tests)
 - ✅ Full documentation
 
-**Happy trading! 🚀**
-
----
-
-*For detailed usage instructions, see INTERACTION_GUIDE.md*  
-*For deployment checklist, see DEPLOYMENT_CHECKLIST.md*  
-*For architecture details, see VISUAL_GUIDE.md*
-```
-balances[0x123...] = 1000000000  // 1 billion tokens
-balances[0x456...] = 500000      // 500 thousand tokens
-```
-
-### 2. Allowances Mapping
-```solidity
-mapping(address => mapping(address => uint256)) allowances;
-```
-**Purpose:** Track approval permissions (owner → spender → amount)
-```
-allowances[owner][spender] = 1000000  // Owner approves spender to use 1M tokens
-```
-
----
 
 ## 🔄 Core ERC-20 Functions Implemented
 
