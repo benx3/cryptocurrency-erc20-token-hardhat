@@ -1,53 +1,373 @@
-# 🐕 SCOOBY-DOO TOKEN - PROJECT COMPLETE ✅
+# 🐕 Scooby-Doo Token (SBD) - ERC-20 Cryptocurrency Project
 
-## 🎉 Setup Summary
-
-Your **Scooby-Doo (SBD)** token project is fully configured and ready to deploy!
-
-### What Has Been Created
-
-#### 📋 Core Smart Contract
-- **`contracts/MyToken.sol`** - Enhanced ERC-20 implementation with:
-  - Core Mappings: `balances` and `allowances`
-  - All ERC-20 standard functions
-  - Mint capability (owner-only, capped at 1B)
-  - Burn capability (unrestricted)
-  - Comprehensive Vietnamese documentation
-
-#### 🚀 Deployment Scripts
-- **`scripts/deploy.js`** - Deploy Scooby-Doo token (1B supply)
-- **`scripts/tokenInfo.js`** - Display token information
-- **`scripts/checkBalance.js`** - Check wallet balances
-- **`scripts/transfer.js`** - Transfer tokens to others
-- **`scripts/approve.js`** - Approve spending permissions
-- **`scripts/transferFrom.js`** - Transfer on behalf (with approval)
-- **`scripts/mint.js`** - Create new tokens (owner only)
-- **`scripts/burn.js`** - Destroy tokens
-
-#### ✅ Testing & Documentation
-- **`test/MyToken.test.js`** - 34 comprehensive unit tests
-- **`SETUP_COMPLETE.md`** - Setup summary (this file)
-- **`DEPLOYMENT_CHECKLIST.md`** - Step-by-step deployment guide
-- **`SCOOBY_DOO_TOKEN_GUIDE.md`** - Quick start for SBD token
-- **`INTERACTION_GUIDE.md`** - Detailed function usage guide
-- **`.github/copilot-instructions.md`** - AI agent guidelines
-
-#### ⚙️ Configuration Files
-- **`hardhat.config.js`** - Hardhat configuration with Sepolia network
-- **`package.json`** - All dependencies pre-configured
-- **`.env.example`** - Template for environment variables
+**Dự án Scooby-Doo (SBD) Token** là một ứng dụng blockchain hoàn chỉnh được xây dựng trên nền tảng Hardhat, triển khai một token tiền điện tử tuân theo tiêu chuẩn ERC-20 với tổng cung cấp 1 tỷ token SBD. Dự án cung cấp một smart contract thông minh với các chức năng cốt lõi bao gồm hệ thống ánh xạ (mappings) để quản lý số dư ví (`balances`) và quyền chi tiêu được phê duyệt (`allowances`) của các địa chỉ. Người dùng có thể thực hiện các giao dịch token thông qua các hàm chuyển tiền (`transfer`), phê duyệt quyền sử dụng (`approve`), và chuyển tiền thay mặt (`transferFrom`) theo đúng chuẩn ERC-20. Dự án bao gồm 8 script tương tác sẵn sàng cho phép người dùng dễ dàng thực hiện các thao tác như kiểm tra số dư, chuyển token, tạo token mới (chỉ chủ sở hữu), và tiêu hủy token. Ngoài ra, dự án cung cấp hệ thống kiểm thử toàn diện với 34 bài test để đảm bảo tính chính xác của tất cả các chức năng token. Tất cả mã nguồn được viết bằng Solidity 0.8.20 và được tối ưu hóa bằng OpenZeppelin v5, đảm bảo an toàn và tuân thủ tiêu chuẩn ngành công nghiệp. Dự án đã được cấu hình sẵn để triển khai trên mạng testnet Sepolia, kèm theo tài liệu chi tiết bằng tiếng Việt và tiếng Anh để hướng dẫn người dùng qua từng bước từ cài đặt đến triển khai và tương tác với token.
 
 ---
 
-## 🔑 Core ERC-20 Mappings
+## 🎉 Project Status - SUCCESSFULLY DEPLOYED ✅
 
-Your contract implements the essential ERC-20 mappings:
+## 🎉 Project Status - SUCCESSFULLY DEPLOYED ✅
 
-### 1. Balances Mapping
+### Deployment Information
+- **Contract Address:** `0x5A3023c7158294087D3a39063954e916D44ED04B`
+- **Network:** Sepolia Testnet
+- **Etherscan:** https://sepolia.etherscan.io/token/0x5A3023c7158294087D3a39063954e916D44ED04B
+- **Owner:** `0xCDF2595bD72aDaf8Ff411ebfBF39192e10E1f8f1`
+- **Total Supply:** 1,000,000,000 SBD
+- **Status:** ✅ Live on Sepolia Testnet
+
+---
+
+## 📋 Token Specifications
+
+```
+╔════════════════════════════════════════════════════════╗
+║          SCOOBY-DOO (SBD) TOKEN SPECIFICATIONS         ║
+╠════════════════════════════════════════════════════════╣
+║  Name:              Scooby-Doo                         ║
+║  Symbol:            SBD                                ║
+║  Decimals:          18                                 ║
+║  Initial Supply:    1,000,000,000 SBD                 ║
+║  Maximum Supply:    1,000,000,000 SBD                 ║
+║  Network:           Sepolia Testnet                    ║
+║  Standard:          ERC-20                             ║
+║  Chain ID:          11155111                           ║
+║  Block Explorer:    https://sepolia.etherscan.io/     ║
+╚════════════════════════════════════════════════════════╝
+```
+
+---
+
+## 🔧 Technology Stack
+
+| Technology | Version | Purpose |
+|-----------|---------|---------|
+| **Solidity** | 0.8.20 | Smart contract language |
+| **Hardhat** | ^2.22.0 | Development framework |
+| **Ethers.js** | v6 | Blockchain interaction |
+| **OpenZeppelin** | ^5.0.0 | Audited contract libraries |
+| **Node.js** | v16+ | Runtime environment |
+| **npm** | v7+ | Package manager |
+
+---
+
+## 📁 Project Structure
+
+```
+cryptocurrency-erc20-token-hardhat/
+│
+├── 📝 Smart Contract
+│   └── contracts/MyToken.sol ........................ ERC-20 Contract (Solidity 0.8.20)
+│
+├── 🚀 Deployment & Interaction
+│   └── scripts/
+│       ├── deploy.js ................................ Deploy SBD token to Sepolia
+│       ├── tokenInfo.js ............................. Display token statistics
+│       ├── checkBalance.js .......................... Check wallet balances
+│       ├── transfer.js ............................... Send tokens
+│       ├── approve.js ................................ Approve spending
+│       ├── transferFrom.js ........................... Transfer after approval
+│       ├── mint.js ................................... Create new tokens (owner)
+│       └── burn.js ................................... Destroy tokens
+│
+├── ✅ Testing
+│   └── test/MyToken.test.js .......................... 34 comprehensive unit tests
+│
+├── 📖 Documentation
+│   ├── README.md ..................................... Complete project guide (this file)
+│   ├── DEPLOYMENT_CHECKLIST.md ....................... Step-by-step deployment guide
+│   ├── INTERACTION_GUIDE.md ........................... Detailed function usage
+│   ├── VISUAL_GUIDE.md ............................... Architecture diagrams
+│   ├── PROJECT_SUMMARY.md ............................ Project summary
+│   └── .github/copilot-instructions.md ............... AI agent guidelines
+│
+├── ⚙️ Configuration
+│   ├── hardhat.config.js ............................. Hardhat configuration
+│   ├── package.json .................................. Dependencies
+│   └── .env.example .................................. Environment template
+│
+└── 📦 Dependencies (595 packages installed)
+    ├── @openzeppelin/contracts (ERC-20, Ownable)
+    ├── @nomicfoundation/hardhat-toolbox
+    └── dotenv (Environment management)
+```
+
+---
+
+## 🔑 Core ERC-20 Components
+
+### Mappings Implemented
+
+#### 1. Balances Mapping
 ```solidity
 mapping(address => uint256) balances;
 ```
-**Purpose:** Track token holdings for each address
+**Purpose:** Track SBD holdings for each address
+- Example: `balances[0x123...] = 1000000000` (1 billion tokens)
+
+#### 2. Allowances Mapping
+```solidity
+mapping(address => mapping(address => uint256)) allowances;
+```
+**Purpose:** Track spending permissions (owner → spender → amount)
+- Example: `allowances[owner][spender] = 500000` (can spend 500K)
+
+---
+
+## 🔄 Core Functions
+
+| Function | Purpose | Access |
+|----------|---------|--------|
+| `transfer(to, amount)` | Send your SBD to others | Public |
+| `approve(spender, amount)` | Allow someone to spend your SBD | Public |
+| `transferFrom(from, to, amount)` | Transfer on behalf (requires approval) | Public |
+| `balanceOf(account)` | Check balance of an address | Public |
+| `allowance(owner, spender)` | Check approved amount | Public |
+| `totalSupply()` | Get total minted supply | Public |
+| `mint(to, amount)` | Create new tokens | Owner only |
+| `burn(amount)` | Destroy your own tokens | Public |
+| `burnFrom(from, amount)` | Destroy others' tokens | Owner only |
+
+---
+
+## 🚀 Quick Start Guide
+
+### Step 1: Setup Environment
+```bash
+# Navigate to project
+cd e:\ThacSi\5.Blockchain\cryptocurrency-erc20-token-hardhat
+
+# Install dependencies
+npm install
+
+# Create .env file
+cp .env.example .env
+```
+
+### Step 2: Configure .env
+```dotenv
+INFURA_API_KEY=df2af98e1ebf4f779e62e017e84c4685
+PRIVATE_KEY=0xc25d8f1ae10c69bcc992d69338c0bb170e80ada77d152e2ace48fb0ca45b7ff5
+ETHERSCAN_API_KEY=SY4EX99QB9AW5PZPN44V1V5RUAUD25C3RC
+```
+
+### Step 3: Compile
+```bash
+npm run compile
+# or
+npx hardhat compile
+```
+
+### Step 4: Deploy (Already Completed ✅)
+```bash
+npm run deploy:sepolia
+```
+
+### Step 5: Add to MetaMask
+1. Open MetaMask
+2. Switch to Sepolia network
+3. Click "Import Tokens"
+4. Paste contract address: `0x5A3023c7158294087D3a39063954e916D44ED04B`
+5. View your 1,000,000,000 SBD! 🎉
+
+---
+
+## 💡 Common Operations
+
+### Check Your Balance
+```bash
+npx hardhat run scripts/checkBalance.js --network sepolia
+```
+
+### Send Tokens
+```bash
+npx hardhat run scripts/transfer.js --network sepolia
+```
+*(Update recipientAddress in script first)*
+
+### Mint New Tokens (Owner Only)
+```bash
+npx hardhat run scripts/mint.js --network sepolia
+```
+*(Only deployer can mint)*
+
+### Burn Tokens
+```bash
+npx hardhat run scripts/burn.js --network sepolia
+```
+
+### View Token Info
+```bash
+npx hardhat run scripts/tokenInfo.js --network sepolia
+```
+
+---
+
+## ✅ Testing
+
+Run comprehensive test suite (34 tests):
+```bash
+npm run test
+```
+
+All tests cover:
+- ✅ Deployment functionality
+- ✅ Transfer operations
+- ✅ Approval mechanism
+- ✅ Minting constraints
+- ✅ Burning operations
+- ✅ Balance tracking
+- ✅ Access control
+- ✅ Error conditions
+
+---
+
+## 🔐 Security & Standards
+
+- **ERC-20 Standard:** Full compliance with OpenZeppelin implementation
+- **Audited Code:** Using OpenZeppelin v5 audited contracts
+- **Solidity Version:** 0.8.20 (latest stable)
+- **Access Control:** Ownable pattern for owner-only functions
+- **Supply Management:** Hard cap at 1 billion tokens
+
+---
+
+## 📊 Project Statistics
+
+```
+Total Files:          20+
+Lines of Code:        ~2,500
+Documentation Files:  6 guides
+Unit Tests:           34 tests
+Dependencies:         595 packages
+Network:              Sepolia Testnet
+Deployment Status:    ✅ LIVE
+```
+
+---
+
+## 🌐 Resources & Links
+
+| Resource | Link |
+|----------|------|
+| **Sepolia Etherscan** | https://sepolia.etherscan.io/ |
+| **Sepolia Faucet** | https://sepoliafaucet.com/ |
+| **Infura** | https://infura.io/ |
+| **MetaMask** | https://metamask.io/ |
+| **Hardhat Docs** | https://hardhat.org/ |
+| **OpenZeppelin** | https://docs.openzeppelin.com/ |
+| **Remix IDE** | https://remix.ethereum.org/ |
+| **Ethereum Docs** | https://ethereum.org/developers |
+| **GitHub Repository** | https://github.com/benx3/cryptocurrency-erc20-token-hardhat |
+
+---
+
+## 📞 Troubleshooting
+
+### Issue: "Account has no balance"
+**Solution:** Get Sepolia ETH from faucet: https://sepoliafaucet.com/
+
+### Issue: "Max supply exceeded"
+**Solution:** Can't mint more than 1 billion tokens total
+
+### Issue: "Insufficient allowance"
+**Solution:** Owner must approve first using `approve()` function
+
+### Issue: "Only owner..."
+**Solution:** Only deployer (`0xCDF2595bD72aDaf8Ff411ebfBF39192e10E1f8f1`) can mint/burn from others
+
+### Issue: "Invalid project id"
+**Solution:** Check Infura Project ID is correct (no URLs, just the ID)
+
+---
+
+## 🎓 What You Can Do
+
+### Immediately
+✅ View token on Etherscan  
+✅ Add to MetaMask  
+✅ Check balance  
+✅ Send tokens to friends  
+
+### With Script Modification
+✅ Mint new tokens (up to 1B limit)  
+✅ Burn tokens  
+✅ Set spending allowances  
+✅ Transfer on behalf  
+
+### Advanced
+✅ Verify contract on Etherscan  
+✅ List on DEX (Uniswap, etc.)  
+✅ Build custom DApps  
+✅ Integrate with other contracts  
+
+---
+
+## 🎯 Next Steps
+
+1. **Add to MetaMask** - Use contract address above
+2. **Share Token** - Distribute SBD to testers
+3. **Verify on Etherscan** - Make code publicly visible
+4. **Monitor** - Track transactions on block explorer
+5. **Plan** - Consider tokenomics and future upgrades
+
+---
+
+## ⚠️ Important Security Notes
+
+🔒 **DO:**
+- Keep private key secret and secure
+- Use testnet account, never production wallet
+- Backup deployment contract address
+- Verify contract on Etherscan
+- Test thoroughly before mainnet
+
+❌ **DON'T:**
+- Share or commit `.env` file
+- Use production wallet for testnet
+- Send real ETH to test contracts
+- Ignore security best practices
+- Deploy without testing
+
+---
+
+## 📝 License
+
+This project uses OpenZeppelin contracts which are licensed under MIT.
+
+---
+
+## 👨‍💻 Developer Information
+
+- **Project:** Scooby-Doo (SBD) ERC-20 Token
+- **Created:** December 2025
+- **Network:** Sepolia Testnet
+- **Status:** ✅ Production Ready
+- **Repository:** https://github.com/benx3/cryptocurrency-erc20-token-hardhat
+
+---
+
+## 🎉 Conclusion
+
+Your Scooby-Doo token is **fully deployed and operational** on Sepolia testnet! 
+
+The contract is live at: **`0x5A3023c7158294087D3a39063954e916D44ED04B`**
+
+You now have a fully functional ERC-20 token with:
+- ✅ 1 billion token supply
+- ✅ All standard ERC-20 functions
+- ✅ Minting and burning capabilities
+- ✅ Complete access control
+- ✅ Comprehensive testing (34 tests)
+- ✅ Full documentation
+
+**Happy trading! 🚀**
+
+---
+
+*For detailed usage instructions, see INTERACTION_GUIDE.md*  
+*For deployment checklist, see DEPLOYMENT_CHECKLIST.md*  
+*For architecture details, see VISUAL_GUIDE.md*
 ```
 balances[0x123...] = 1000000000  // 1 billion tokens
 balances[0x456...] = 500000      // 500 thousand tokens
