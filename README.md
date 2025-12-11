@@ -1,6 +1,6 @@
 # 🐕 Scooby-Doo Token (SBD) - ERC-20 Cryptocurrency Project
 
-**Dự án Scooby-Doo (SBD) Token** là một ứng dụng blockchain hoàn chỉnh được xây dựng trên nền tảng Hardhat, triển khai một token tiền điện tử tuân theo tiêu chuẩn ERC-20 với tổng cung cấp 1 tỷ token SBD. Dự án cung cấp một smart contract thông minh với các chức năng cốt lõi bao gồm hệ thống ánh xạ (mappings) để quản lý số dư ví (`balances`) và quyền chi tiêu được phê duyệt (`allowances`) của các địa chỉ. Người dùng có thể thực hiện các giao dịch token thông qua các hàm chuyển tiền (`transfer`), phê duyệt quyền sử dụng (`approve`), và chuyển tiền thay mặt (`transferFrom`) theo đúng chuẩn ERC-20. Dự án bao gồm 8 script tương tác sẵn sàng cho phép người dùng dễ dàng thực hiện các thao tác như kiểm tra số dư, chuyển token, tạo token mới (chỉ chủ sở hữu), và tiêu hủy token. Tất cả mã nguồn được viết bằng Solidity 0.8.20 và được tối ưu hóa bằng OpenZeppelin v5, đảm bảo an toàn và tuân thủ tiêu chuẩn ngành công nghiệp. Dự án đã được cấu hình sẵn để triển khai trên mạng testnet Sepolia.
+**Dự án Scooby-Doo (SBD) Token** là một ứng dụng blockchain hoàn chỉnh được xây dựng trên nền tảng Hardhat, triển khai một token tiền điện tử tuân theo tiêu chuẩn ERC-20 với tổng cung cấp 1 tỷ token SBD. Dự án cung cấp một smart contract thông minh với các chức năng cốt lõi bao gồm hệ thống ánh xạ (mappings) để quản lý số dư ví (`balances`) và quyền chi tiêu được phê duyệt (`allowances`) của các địa chỉ. Người dùng có thể thực hiện các giao dịch token thông qua các hàm chuyển tiền (`transfer`), phê duyệt quyền sử dụng (`approve`), và chuyển tiền thay mặt (`transferFrom`) theo đúng chuẩn ERC-20. Dự án bao gồm 8 script tương tác sẵn sàng cho phép người dùng dễ dàng thực hiện các thao tác như kiểm tra số dư, chuyển token, tạo token mới (chỉ chủ sở hữu), và tiêu hủy token. Tất cả mã nguồn được viết bằng Solidity 0.8.20 và được tối ưu hóa bằng OpenZeppelin v5. Dự án đã được cấu hình sẵn để triển khai trên mạng testnet Sepolia.
 
 ---
 ## 🎉 Project Status - SUCCESSFULLY DEPLOYED ✅
@@ -254,23 +254,6 @@ Deployment Status:    ✅ LIVE
 
 ---
 
-## Troubleshooting
-
-### Issue: "Account has no balance"
-**Solution:** Get Sepolia ETH from faucet: https://sepoliafaucet.com/
-
-### Issue: "Max supply exceeded"
-**Solution:** Can't mint more than 1 billion tokens total
-
-### Issue: "Insufficient allowance"
-**Solution:** Owner must approve first using `approve()` function
-
-### Issue: "Only owner..."
-**Solution:** Only deployer (`0xCDF2595bD72aDaf8Ff411ebfBF39192e10E1f8f1`) can mint/burn from others
-
-### Issue: "Invalid project id"
-**Solution:** Check Infura Project ID is correct (no URLs, just the ID)
-
 
 ## 📝 License
 
@@ -427,44 +410,6 @@ This project teaches you:
 
 ---
 
-## 🔗 Important Links
-
-| Link | Purpose |
-|------|---------|
-| https://sepolia.etherscan.io/ | View transactions |
-| https://sepoliafaucet.com/ | Get test ETH |
-| https://infura.io/ | RPC provider |
-| https://metamask.io/ | Web3 wallet |
-| https://docs.openzeppelin.com/ | OpenZeppelin docs |
-
----
-
-## 📝 Next Steps
-
-1. **Review Files:**
-   - Read `DEPLOYMENT_CHECKLIST.md` for step-by-step instructions
-   - Review `SCOOBY_DOO_TOKEN_GUIDE.md` for quick start
-
-2. **Prepare Environment:**
-   - Get API keys from Infura
-   - Get Sepolia ETH from faucet
-   - Setup `.env` file
-
-3. **Deploy:**
-   - Run `npm run deploy:sepolia`
-   - Save contract address
-
-4. **Test:**
-   - Add to MetaMask
-   - Transfer tokens
-   - Run all tests
-
-5. **Verify:**
-   - Check on Etherscan
-   - Verify contract source
-
----
-
 ## ⚠️ Important Notes
 
 ### Security
@@ -507,19 +452,6 @@ This project teaches you:
 - Create token website
 - Build applications
 
----
-
-## 📞 Troubleshooting
-
-| Issue | Solution |
-|-------|----------|
-| "Account has no balance" | Get Sepolia ETH from faucet |
-| "Invalid API Key" | Create account on Infura |
-| "Max supply exceeded" | Can't mint more than 1B total |
-| "Only owner..." | Only deployer can mint |
-| "Insufficient allowance" | Must approve before transferFrom |
-
----
 
 ## 🏆 Success Checklist
 
@@ -531,42 +463,6 @@ This project teaches you:
 - [ ] Can transfer tokens
 - [ ] Contract visible on Etherscan
 - [ ] All functions tested
-
----
-
-## 💡 Token Design Highlights
-
-### Smart Supply Management
-- Maximum supply of **1 billion** prevents inflation
-- Only owner can create new tokens (up to cap)
-- Anyone can burn their own tokens (deflation)
-
-### Ownership Model
-- Single owner with minting rights
-- Owner can burn tokens from any address
-- Owner address set at deployment
-
-### User Control
-- Users can freely transfer tokens
-- Users can approve spending
-- Users can burn their own tokens
-- Users can check balances and allowances
-
----
-
-## 🎉 You're All Set!
-
-Your **Scooby-Doo (SBD)** token is configured and ready to go.
-
-### Ready to Deploy? 🚀
-
-Follow the **DEPLOYMENT_CHECKLIST.md** for step-by-step instructions.
-
-### Have Questions? 📚
-
-Check **INTERACTION_GUIDE.md** for detailed function documentation.
-
----
 
 **Status:** ✅ Ready for Deployment  
 **Network:** Sepolia Testnet  
