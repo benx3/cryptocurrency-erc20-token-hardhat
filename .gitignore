@@ -41,3 +41,5 @@ tmp/
 temp/
 *.tmp
 node_modules
+.github
+copilot-instructions.*
